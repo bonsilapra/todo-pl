@@ -1,38 +1,316 @@
-.App {
-  text-align: center;
+
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(45deg, #6EE03D, #CDFFB8);
+  color: #3E9419;
+  font-family: "Nunito", sans-serif;
+  min-height: 100vh;
+}
+header {
+  font-size: 2rem;
+  padding: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
+header,
+form {
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+form input {
+  margin-right: 1rem;
+  padding-left: 0.5rem;
+}
+
+form input,
+form button {
+  padding: 0.3rem;
+  font-size: 2rem;
+  border: none;
+  background: #ffffff;
+  border-radius: 10px;
+  font-family: "Nunito", sans-serif;
+  color: #942C8D;
+  box-shadow: 0 0 20px #3E9419;
+}
+
+form button {
+  color: #942C8D;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  width: 50px;
+}
+
+form button:hover {
+  background: #942C8D;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+  margin-top: 40px;
+}
+
+.todo {
+  margin: 0.8rem;
+  font-size: 1.5rem;
+  width: 600px;
+  width: 60vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  background: #449419;
+  color: #ffffff;
+  min-height: 50px;
+}
+
+.form-edit {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  margin: 0;
+  margin: 0.5rem;
+  padding: 0;
+  min-height: 50px;
+}
+
+.todo-edit {
+  font-size: 1.5rem;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+  background: #F2F2F2;
+  color: #449419;
+  border-radius: 10px  ;
+}
+
+.filter-todo {
+  padding: 0.30rem;
+  padding-left: 0.5rem;
+  border-radius: 10px;
+  background: #ffffff;
+  font-size: 30px;
+  height: 50px;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.trash-btn {
+  background: #449419;
+  color: #7dfc4a;
+  border: none;
+  margin: 0.7rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  /* border-radius: 0 10px 10px 0; */
+  text-shadow: 0px 0px 10px #000000;
+  transition: all 0.2s ease;
+}
+
+.edit-btn {
+  background: #449419;
+  color: #ffffff;
+  border: none;
+  margin: 0.7rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  /* border-radius: 0 10px 10px 0; */
+  text-shadow: 0px 0px 10px #000000;
+  transition: all 0.2s ease;
+}
+
+.important-btn {
+  background: #449419;
+  color: #eb1935;
+  border: none;
+  margin: 0.7rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  text-shadow: 0px 0px 10px #000000;
+  transition: all 0.2s ease;
+}
+
+.not-important-btn {
+  background: #449419;
+  color: #8cd1ff;
+  border: none;
+  margin: 0.7rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  text-shadow: 0px 0px 10px #000000;
+  transition: all 0.2s ease;
+}
+
+.complete-btn-edit {
+  background: #ffffff;
+  color: #449419;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  height: 50px;
+  transition: all 0.3s ease;
+}
+
+.complete-btn-edit:hover {
+  text-shadow: 0px 0px 10px #449419;
+  transition: all 0.3s ease;
+  background: #449419;
+  color: #ffffff;
+}
+
+
+
+.important-btn:hover,
+.not-important-btn:hover,
+.edit-btn:hover,
+.trash-btn:hover {
+  text-shadow: 0px 0px 15px #ffffff;
+  transition: all 0.2s ease;
+  transform: rotate(30deg)
+}
+
+.todo-item {
+  padding: 0rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fa-trash,
+.fa-check {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.fall {
+  transform: translateY(10rem) rotateZ(10deg);
+  opacity: 0;
+}
+
+.completed {
+
+  background: #942C94;
+  transition: all 0.2s ease;
+}
+
+.btn-completed {
+  background: #942C94;
+  transition: all 0.2s ease;
+}
+
+
+
+/*CUSTOM SELECTOR */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 20px !important;
+  color: #942C8D;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  width: 15rem;
+  border: 10px !important;
+}
+
+/* Custom Select */
+.select {
+  margin-left: 1rem;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  border: 10px !important;
+  box-shadow: 0 0 20px #3E9419;
+  background-color: #85d163;
+}
+
+
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.9rem;
+  background: #942C8D;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  pointer-events: none;
+  
+}
+/* Transition */
+
+.select:hover::after {
+  text-shadow: 0px 0px 10px #ffffff;
+  transition: all 0.2s ease;
+}
+
+
+@media screen and (max-width: 800px) {
+  .main-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form {
+    margin-bottom: 20px;
+  }
+
+  form button {
+    margin-top: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100px
+  }
+
+  .form-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form input {
+    width: 95%;
+  }
+
+  .todo-list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .todo {
+    width: 90%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
