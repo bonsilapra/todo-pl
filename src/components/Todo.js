@@ -90,14 +90,14 @@ const Todo = ({text, todo, todos, setTodos }) => {
                         className={`not-important-btn ${todo.completed ? "btn-completed" : ''}`}
                         title="Zwykłe"
                     >
-                        <i className="fas fa-times"></i>
+                        <i className="fas fa-exclamation"></i>
                     </button>):
                     (<button 
                         onClick={completeHandler}
                         className="important-btn"
                         title="Pilne"
                     >
-                        <i className="fas fa-exclamation"></i>
+                        <i className="fas fa-ellipsis-h"></i>
                     </button>)
                     }
                     <button 

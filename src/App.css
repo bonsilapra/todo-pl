@@ -147,7 +147,7 @@ form button:hover {
 
 .important-btn {
   background: #449419;
-  color: #eb1935;
+  color: #8cd1ff;
   border: none;
   margin: 0.7rem;
   cursor: pointer;
@@ -158,7 +158,7 @@ form button:hover {
 
 .not-important-btn {
   background: #449419;
-  color: #8cd1ff;
+  color: #eb1935;
   border: none;
   margin: 0.7rem;
   cursor: pointer;
