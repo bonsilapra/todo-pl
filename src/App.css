@@ -26,7 +26,6 @@ form {
 }
 
 form input {
-  margin-right: 1rem;
   padding-left: 0.5rem;
 }
 
@@ -49,6 +48,8 @@ form button {
   transition: all 0.3s ease;
   border-radius: 10px;
   width: 50px;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 form button:hover {
@@ -190,9 +191,19 @@ form button:hover {
 .not-important-btn:hover,
 .edit-btn:hover,
 .trash-btn:hover {
-  text-shadow: 0px 0px 15px #ffffff;
+  text-shadow: 0px 0px 10px #000000;
   transition: all 0.2s ease;
   transform: rotate(30deg)
+}
+
+
+.important-btn:focus,
+.not-important-btn:focus,
+.edit-btn:focus,
+.trash-btn:focus {
+  text-shadow: 0px 0px 10px #ffffff;
+  transition: all 0.2s ease;
+  transform: rotate(0deg)
 }
 
 .todo-item {
@@ -242,7 +253,6 @@ select {
 
 /* Custom Select */
 .select {
-  margin-left: 1rem;
   position: relative;
   overflow: hidden;
   color: #ffffff;
