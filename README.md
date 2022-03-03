@@ -1,10 +1,10 @@
 # About
 
-This is a simple app created to organize daily tasks. App allows to add, edit, check/uncheck and remove tasks. It was created to practice basic skills in React.js.
+The second version of Todo App. It was created at my mother's request. Now she uses it at work. There are some changes like polish language, color and different buttons functionality.
 
 ## Live demo
 
-[Todo App](http://joanna-falkowska.pl/todo-list)
+[Todo App - polish](http://joanna-falkowska.pl/todo-pl)
 
 ## Technology stack and tools:
 
